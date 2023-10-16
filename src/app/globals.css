@@ -2,26 +2,148 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .ProseMirror{
+    padding: 16px;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
   }
-}
+  .ProseMirror p{
+    font-size: 18px;
+    color: #242424;
+    margin-top: 1.56em;
+    font-weight: 400;
+    line-height: 28px;
+    word-break: break-word;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: -0.003em
+  }
+  .ProseMirror h1{
+    display: block;
+    font-size: 2.8em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+   
+  }
+  .ProseMirror h2{
+    display: block;
+    font-size: 2em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+  .ProseMirror h3{
+    display: block;
+    font-size: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+  .ProseMirror h4{
+    display: block;
+    margin-top: 1.33em;
+    font-size: 1.3em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+  .ProseMirror h5{
+    display: block;
+    font-size: 1em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+  .ProseMirror h6{
+    display: block;
+    font-size: .83em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+  .ProseMirror pre {
+    background: #0D0D0D;
+    color: #FFF;
+    font-family: 'JetBrainsMono', monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
+  }
+  .ProseMirror pre code {
+    color: inherit;
+    padding: 0;
+    background: none;
+    font-size: 18px;
+  }
+  
+  .ProseMirror ul li {
+    list-style: none;
+    position: relative;
+    padding: 3px 0 2px 25px;
+    
+  }
+  .ProseMirror ul li p {
+   line-height: 8px;
+   margin-top: 0.5em;
+    
+  }
+  .ProseMirror ul li::before {
+    content: '->';
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+  .ProseMirror ol li {
+    list-style-type: decimal;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 16px;
+    
+  }
+ .ProseMirror blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #db3019;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+ .ProseMirror blockquote:before {
+    color: #db3019;;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+ .ProseMirror blockquote p {
+    display: inline;
+  }
+  .ProseMirror hr{
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
