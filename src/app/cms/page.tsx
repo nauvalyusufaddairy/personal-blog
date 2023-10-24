@@ -112,22 +112,34 @@ export default function CMS() {
   );
 }
 
+const Compose = () => {
+  return (
+    <div className="w-full">
+      <Tiptap />
+    </div>
+  );
+};
+
+const Dashboard = () => {
+  return <div>Dashboard</div>;
+};
 const SidebarContent = ({ options }: { options: string }) => {
   switch (options) {
     case "compose": {
       return (
         <div className="w-full flex justify-center">
-          <div className="w-[80%] bg-white">
-            <Tiptap />
+          <div className="w-[90%] bg-white">
+            <Compose />
           </div>
         </div>
       );
     }
+
     default: {
       return (
         <div className="w-full flex justify-center">
           <div className="w-[80%] bg-white">
-            <Tiptap />
+            <Dashboard />
           </div>
         </div>
       );
