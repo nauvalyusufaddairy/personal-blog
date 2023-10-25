@@ -1,11 +1,8 @@
 "use client";
-
+import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
-import React, { useContext, useEffect, useState } from "react";
-
-const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  // @ts-ignore
-  const { theme } = useContext(ThemeContext);
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
+  const { theme } = useContext(ThemeContext) as any;
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -13,8 +10,6 @@ const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   if (mounted) {
-    return <div className={"dark"}>{children}</div>;
+    return <div className={theme}>{children}</div>;
   }
 };
-
-export default ThemeProvider;
