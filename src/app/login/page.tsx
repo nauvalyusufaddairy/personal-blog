@@ -1,9 +1,12 @@
 "use client";
 import styles from "./loginPage.module.css";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 const LoginPage = () => {
-  const status = "unauthenticate";
+  const { status, data } = useSession();
+
+  console.log("status", status, "data", data);
   const router = useRouter();
   // @ts-ignore
   if (status === "loading") {

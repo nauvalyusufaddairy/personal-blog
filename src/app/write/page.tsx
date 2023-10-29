@@ -11,14 +11,8 @@ export default function Write() {
     <div className={styles.container}>
       <input type="text" placeholder="Title" className={styles.input} />
       <div className={styles.editor}>
-        <button className={styles.button}>
-          <Image
-            src={"/plus.png"}
-            alt=""
-            width={16}
-            height={16}
-            onClick={() => setOpen(!open)}
-          />
+        <button className={styles.button} onClick={() => setOpen(!open)}>
+          <Image src={"/plus.png"} alt="" width={16} height={16} />
         </button>
         {open && (
           <div className={styles.add}>
